@@ -5,10 +5,11 @@
 
 ## Overview
 
-•	Web Scraping of the Used Cars portal
-•	Forecasting the price of used cars using regression analysis 
-•	Predicting the price of the Used Cars. 
-•	Developing a web design for prediction.
+* Web Scraping of the Used Cars portal
+
+* Forecasting the price of used cars using regression analysis 
+* Predicting the price of the Used Cars. 
+* Developing a web design for prediction.
 
 
 ## BACKGROUND
