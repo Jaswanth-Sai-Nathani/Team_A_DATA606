@@ -1,50 +1,79 @@
 # DATA 606 PROJECT PROPOSAL
 
-# STOCK PRICE PREDICTION ANALYSIS
+# USED CARS PRICE PPREDICTION
 
 
+## Overview
 
-## Introduction
-A stock market is a public market where you can buy and sell shares for publicly listed companies. The stocks, also known as equities, represent ownership in the company. The stock exchange is the mediator that allows the buying and selling of shares. The stock market broadly refers to a number of exchanges and other venues in which shares of publicly held companies are bought and sold. Such financial activities are conducted through institutionalized formal exchanges (physical or electronic) and via over-the-counter (OTC) marketplaces that operate under a defined set of regulations. While both the terms “stock market” and “stock exchange” are often used interchangeably, the latter term is really a subset of the former. Traders in the stock market buy or sell shares on one or more of the stock exchanges that are part of the overall stock market. This essentially means that a company divides itself into a number of shares (for example, 20 million shares) and sells some of those shares (say, 5 million shares) to the public at a price (for instance, 10$ per share).
+•	Web Scraping of the Used Cars portal
+•	Forecasting the price of used cars using regression analysis 
+•	Predicting the price of the Used Cars. 
+•	Developing a web design for prediction.
 
-## Stock Price Prediction
 
-Stock price analysis has been a critical area of research and is one of the top applications of machine learning.
-Stock Price Prediction using machine learning helps you discover the future value of company stock and other financial assets traded on an exchange. The entire idea of predicting stock prices is to gain significant profits. Predicting how the stock market will perform is a hard task to do. There are other factors involved in the prediction, such as physical and psychological factors, rational and irrational behavior, and so on. All these factors combine to make share prices dynamic and volatile. This makes it very difficult to predict stock prices with high accuracy. 
-Many people nowadays are investing a small part of their income regularly in stocks hence understanding the trends of their investments has become very important to gain return on their investments. Hence machine learning algorithm can b|e used effectively to understand and predict the future trends of these stock market for better investments.
+## BACKGROUND
 
-## HYPOTHESIS
+The manufacturer sets the price of new cars in the industry, with the government incurring some additional costs in the form of taxes. Customers who purchase a new car can rest comfortable that the money they spend will be well spent. However, due to rising new car prices and customers' inability to purchase new automobiles due to a lack of cash, used car sales are on the rise worldwide. A used car price prediction system is needed to accurately estimate the car's worthiness based on a range of factors. While there are websites that provide this service, their forecast approach may not be the most accurate. Furthermore, several methods and algorithms may aid in the prediction of a used car's true market worth. When purchasing and selling, it's critical to understand their true market value.
 
-Predicting the future stock value of a user selected stock based on the historical stock data over an year period and understand if it is good to invest in that particular stock or not.
+Being able to estimate the market value of used cars can benefit both buyers and sellers. Dealers that sell used cars are one of the most likely groups to be interested in the findings of this study. Used car dealers that have a better understanding of what makes a car desirable and what the most significant qualities are for a used automobile will be able to apply this knowledge and provide better service. As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some time in their lives. It's a great mistake to pay too much or sell for less than the market worth in this process.
+
+
+## Research Questions:
+
+
+1.	Our project is based on doing a predictive analysis on the price of used cars and estimating what would be good price to buy or sell a car in open market that would be helpful to buyers and sellers.
+
+2.	Try and estimate what are the most important factors that will best suit in the price determination of a used car.
+
+3.	Understand the current market on which brand has the highest resale market with the historical data under consideration.
 
 
 
 ## DATASET 
 
-Dataset will vary based on the stock selected because we will directly webscrape the data from google and use it.
-But for all the datasets the columns in the dataset we are going to analyze would be same.
+The dataset comprises data extracted from https://www.cars.com/ using Web scraping technique. This information can be utilized for a variety of applications, including price prediction, which demonstrates the application of linear regression in Machine Learning. The following are the columns in our dataset until now which we scraped and would like to add more features
 
-Dataset Attributes
-1. Date
-2. Open 
-3. High
-4. Low 
-5. Close 
-6. Adj Close
-7. Volume
+1. Brand
+2. Model
+3. Trim
+4. Manufacture Year
+5. Stock Type
+6. Mileage
+7. Dealer Name
+8. Distance
+9. Rating
+10. Review Count
+11. Badge Label
+12. Price
 
-We will use webscrapping on this website: https://finance.yahoo.com
 
 ## PRIMARY UNIT OF ANALYSIS
 
-The primary unit of analysis the I would be using currently would be Open,Close,Adj Close and new column that I would create based on the difference value between Open and Adj Close to determine loss or profit for that particular day.
+This data has numerous observations. For analyzing the trends, we considered the data of 550 pages, resulting in the observations consisting of the details of 10874 cars. Our main target of analysis is based on the ‘Price’ of the car, which involves various other features that are independent and dependent on the price of car like mileage, year, manufacturer etc. Once we scrape more features would also try and base our analysis on transmission, gas etc.
 
-## Machine Learning Techniques Planning to use
 
-My plan is to use machine learning techniques such as ARIMA(Autoregressive Integrated Moving Average) and try and understand the stock behaviour. The ARIMA model has been widely utilized in banking and economics since it is recognized to be reliable, efficient, and capable of predicting short-term share market movements. 
+## Feature Selection:
+
+Checking the correlation of other variables with the price variable and finding the predictor variables with high correlation and also find the independent variables to the price of car.
+
+
+## Methodology:
+
+•	Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: www.cars.com) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
+
+•	Next, we like to develop a regression model to predict the price of used car based on various models like linear regression model, support vector machine and random forest model and understand and base our analysis by comparing the best possible model for our forecasting.
+
+•	Next, we would proceed with the development of web design to have a user better understand the price of their car based on our predictions and data we possess.
+
+Model Selection: 
+
+•	Prediction will be done considering the best performed model.
+•	Building a web application for the prediction of price of a used car based on the features and specifications of the car.
+
+
 
 ## OUTCOMES
 
-1. Try and understand the behaviour of stock prices
-2. Learn time series techniques used for predictive modelling
-3. Extend this idea in future to implement smart web based application.
+•	Primary goal of the project is to design a predictive model that can be used in real world scenarios to determine the price of used car in market.
+•	Finding a best fit model for price prediction of used cars.
+•	Developing a Web application that can suggest the user the price they should be paying or selling their used car.
