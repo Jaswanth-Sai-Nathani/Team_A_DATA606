@@ -3,7 +3,7 @@
 # USED CARS PRICE PPREDICTION
 
 
-## Overview
+## OVERVIEW
 
 * Web Scraping of the Used Cars portal
 
@@ -19,7 +19,7 @@ The manufacturer sets the price of new cars in the industry, with the government
 Being able to estimate the market value of used cars can benefit both buyers and sellers. Dealers that sell used cars are one of the most likely groups to be interested in the findings of this study. Used car dealers that have a better understanding of what makes a car desirable and what the most significant qualities are for a used automobile will be able to apply this knowledge and provide better service. As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some time in their lives. It's a great mistake to pay too much or sell for less than the market worth in this process.
 
 
-## Research Questions:
+## RESEARCH QUESTIONS:
 
 
 1.	Our project is based on doing a predictive analysis on the price of used cars and estimating what would be good price to buy or sell a car in open market that would be helpful to buyers and sellers.
@@ -53,12 +53,12 @@ The dataset comprises data extracted from https://www.cars.com/ using Web scrapi
 This data has numerous observations. For analyzing the trends, we considered the data of 550 pages, resulting in the observations consisting of the details of 10874 cars. Our main target of analysis is based on the ‘Price’ of the car, which involves various other features that are independent and dependent on the price of car like mileage, year, manufacturer etc. Once we scrape more features would also try and base our analysis on transmission, gas etc.
 
 
-## Feature Selection:
+## FEATURE SELECTION:
 
 Checking the correlation of other variables with the price variable and finding the predictor variables with high correlation and also find the independent variables to the price of car.
 
 
-## Methodology:
+## METHODOLOGY:
 
 * Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: www.cars.com) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
 
@@ -66,7 +66,7 @@ Checking the correlation of other variables with the price variable and finding 
 
 * Next, we would proceed with the development of web design to have a user better understand the price of their car based on our predictions and data we possess.
 
-## Model Selection: 
+## MODEL SELECTION: 
 
 * Prediction will be done considering the best performed model.
 * Building a web application for the prediction of price of a used car based on the features and specifications of the car.
