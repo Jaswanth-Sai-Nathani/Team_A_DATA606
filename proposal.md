@@ -60,21 +60,21 @@ Checking the correlation of other variables with the price variable and finding 
 
 ## Methodology:
 
-•	Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: www.cars.com) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
+* Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: www.cars.com) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
 
-•	Next, we like to develop a regression model to predict the price of used car based on various models like linear regression model, support vector machine and random forest model and understand and base our analysis by comparing the best possible model for our forecasting.
+* Next, we like to develop a regression model to predict the price of used car based on various models like linear regression model, support vector machine and random forest model and understand and base our analysis by comparing the best possible model for our forecasting.
 
-•	Next, we would proceed with the development of web design to have a user better understand the price of their car based on our predictions and data we possess.
+* Next, we would proceed with the development of web design to have a user better understand the price of their car based on our predictions and data we possess.
 
-Model Selection: 
+## Model Selection: 
 
-•	Prediction will be done considering the best performed model.
-•	Building a web application for the prediction of price of a used car based on the features and specifications of the car.
+* Prediction will be done considering the best performed model.
+* Building a web application for the prediction of price of a used car based on the features and specifications of the car.
 
 
 
 ## OUTCOMES
 
-•	Primary goal of the project is to design a predictive model that can be used in real world scenarios to determine the price of used car in market.
-•	Finding a best fit model for price prediction of used cars.
-•	Developing a Web application that can suggest the user the price they should be paying or selling their used car.
+* Primary goal of the project is to design a predictive model that can be used in real world scenarios to determine the price of used car in market.
+* Finding a best fit model for price prediction of used cars.
+* Developing a Web application that can suggest the user the price they should be paying or selling their used car.
