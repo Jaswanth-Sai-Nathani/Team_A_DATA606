@@ -98,4 +98,4 @@ Checking the correlation of other variables with the price variable and finding 
 * Finding a best fit model for prediction
 * Developing a web design for user friendly prediction
 
-### Along with the individual responsibilities, we will complement each other's work and get the best outcome for the project. We involve in regular discussion to develop the project and to overcome the complications. 
+Along with the individual responsibilities, we will complement each other's work and get the best outcome for the project. We involve in regular discussion to develop the project and to overcome the complications. 
