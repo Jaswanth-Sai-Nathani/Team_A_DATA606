@@ -2,11 +2,14 @@
 
 # USED CARS PRICE PPREDICTION
 
+## TEAM DESCRIPTION
 
-## OVERVIEW
+This is a team project of Saida Babu Garlapati and Jaswanth Sai Nathani.
+
+
+## PROJECT OVERVIEW
 
 * Web Scraping of the Used Cars portal
-
 * Forecasting the price of used cars using regression analysis 
 * Predicting the price of the Used Cars. 
 * Developing a web design for prediction.
@@ -78,3 +81,21 @@ Checking the correlation of other variables with the price variable and finding 
 * Primary goal of the project is to design a predictive model that can be used in real world scenarios to determine the price of used car in market.
 * Finding a best fit model for price prediction of used cars.
 * Developing a Web application that can suggest the user the price they should be paying or selling their used car.
+
+## Responsibilities
+
+### Saida Babu Garlapati: 
+* Web Scraping the cars portal
+* Extracting the Dataset
+* Data Cleaning
+* Exploratory Data Analysis
+* Performing Regression analysis
+
+### Jaswanth Sai Nathani
+* Performing Data Modeling
+* Checking different prediction models
+* Model comparision and Cross validating the results
+* Finding a best fit model for prediction
+* Developing a web design for user friendly prediction
+
+### Along with the individual responsibilities, we will complement each other's work and get the best outcome for the project. We involve in regular discussion to develop the project and to overcome the complications. 
