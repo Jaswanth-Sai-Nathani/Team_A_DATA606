@@ -86,8 +86,8 @@ Checking the correlation of other variables with the price variable and finding 
 
 ### Saida Babu Garlapati: 
 * Web Scraping the cars portal
-* Extracting the Dataset
-* Data Cleaning
+* Data collection and extracting the dataset 
+* Initial Cleaning of the data
 * Exploratory Data Analysis
 * Performing Regression analysis
 
