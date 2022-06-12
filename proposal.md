@@ -91,7 +91,7 @@ Checking the correlation of other variables with the price variable and finding 
 * Exploratory Data Analysis
 * Performing Regression analysis
 
-### Jaswanth Sai Nathani
+### Jaswanth Sai Nathani:
 * Performing Data Modeling
 * Checking different prediction models
 * Model comparision and Cross validating the results
