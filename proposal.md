@@ -82,7 +82,7 @@ Checking the correlation of other variables with the price variable and finding 
 * Finding a best fit model for price prediction of used cars.
 * Developing a Web application that can suggest the user the price they should be paying or selling their used car.
 
-## Responsibilities
+## TEAM RESPONSIBILITIES
 
 ### Saida Babu Garlapati: 
 * Web Scraping the cars portal
