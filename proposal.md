@@ -63,7 +63,7 @@ Checking the correlation of other variables with the price variable and finding 
 
 ## METHODOLOGY:
 
-* Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: www.cars.com) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
+* Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: https://www.truecar.com ) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
 
 * Next, we like to develop a regression model to predict the price of used car based on various models like linear regression model, support vector machine and random forest model and understand and base our analysis by comparing the best possible model for our forecasting.
 
