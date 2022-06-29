@@ -35,7 +35,7 @@ Being able to estimate the market value of used cars can benefit both buyers and
 
 ## DATASET 
 
-The dataset comprises data extracted from https://www.cars.com/ using Web scraping technique. This information can be utilized for a variety of applications, including price prediction, which demonstrates the application of linear regression in Machine Learning. The following are the columns in our dataset until now which we scraped and would like to add more features
+The dataset comprises data extracted from https://www.truecar.com using Web scraping technique. This information can be utilized for a variety of applications, including price prediction, which demonstrates the application of linear regression in Machine Learning. The following are the columns in our dataset until now which we scraped and would like to add more features
 
 1. Brand
 2. Model
