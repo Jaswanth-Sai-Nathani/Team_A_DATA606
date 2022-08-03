@@ -36,27 +36,9 @@ Being able to estimate the market value of used cars can benefit both buyers and
 
 
 
-## DATASET 
-
-The dataset comprises data extracted from https://www.truecar.com using Web scraping technique. This information can be utilized for a variety of applications, including price prediction, which demonstrates the application of linear regression in Machine Learning. The following are the columns in our dataset until now which we scraped and would like to add more features
-
-1. Brand
-2. Model
-3. Trim
-4. Manufacture Year
-5. Stock Type
-6. Mileage
-7. Dealer Name
-8. Distance
-9. Rating
-10. Review Count
-11. Badge Label
-12. Price
-
-
 ## PRIMARY UNIT OF ANALYSIS
 
-This data has numerous observations. For analyzing the trends, we considered the data of 550 pages, resulting in the observations consisting of the details of 10874 cars. Our main target of analysis is based on the ‘Price’ of the car, which involves various other features that are independent and dependent on the price of car like mileage, year, manufacturer etc. Once we scrape more features would also try and base our analysis on transmission, gas etc.
+This data has numerous observations. For analyzing the trends, we considered the data of 333 pages, resulting in the observations consisting of the details of 10172 cars. Our main target of analysis is based on the ‘Price’ of the car, which involves various other features that are independent and dependent on the price of car like mileage, year, manufacturer etc. Once we scrape more features would also try and base our analysis on transmission, gas etc.
 
 
 ## FEATURE SELECTION:
@@ -100,5 +82,3 @@ Checking the correlation of other variables with the price variable and finding 
 * Model comparision and Cross validating the results
 * Finding a best fit model for prediction
 * Developing a web design for user friendly prediction
-
-Along with the individual responsibilities, we will complement each other's work and get the best outcome for the project. We involve in regular discussion to develop the project and to overcome the complications. 
