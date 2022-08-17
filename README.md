@@ -1,5 +1,5 @@
 # Repository for DATA 606
-# DATA 606 PROJECT PROPOSAL
+# DATA 606 FINAL PROJECT REPORT
 
 # USED CARS PRICE PPREDICTION
 
@@ -12,60 +12,173 @@
 
 ## PROJECT OVERVIEW
 
-* Web Scraping of the Used Cars portal
-* Forecasting the price of used cars using regression analysis 
-* Predicting the price of the Used Cars. 
-* Developing a web design for prediction.
-
-
-## BACKGROUND
-
-The manufacturer sets the price of new cars in the industry, with the government incurring some additional costs in the form of taxes. Customers who purchase a new car can rest comfortable that the money they spend will be well spent. However, due to rising new car prices and customers' inability to purchase new automobiles due to a lack of cash, used car sales are on the rise worldwide. A used car price prediction system is needed to accurately estimate the car's worthiness based on a range of factors. While there are websites that provide this service, their forecast approach may not be the most accurate. Furthermore, several methods and algorithms may aid in the prediction of a used car's true market worth. When purchasing and selling, it's critical to understand their true market value.
-
-Being able to estimate the market value of used cars can benefit both buyers and sellers. Dealers that sell used cars are one of the most likely groups to be interested in the findings of this study. Used car dealers that have a better understanding of what makes a car desirable and what the most significant qualities are for a used automobile will be able to apply this knowledge and provide better service. As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some time in their lives. It's a great mistake to pay too much or sell for less than the market worth in this process.
-
-
-## RESEARCH QUESTIONS:
-
-
-1.	Our project is based on doing a predictive analysis on the price of used cars and estimating what would be good price to buy or sell a car in open market that would be helpful to buyers and sellers.
-
-2.	Try and estimate what are the most important factors that will best suit in the price determination of a used car.
-
-3.	Understand the current market on which brand has the highest resale market with the historical data under consideration.
+* Introduction
+* Data Collection
+* Data Cleaning
+* Exploratory Data Analysis
+* Prediction Modelling
+* Application Design
 
 
 
-## PRIMARY UNIT OF ANALYSIS
 
-This data has numerous observations. For analyzing the trends, we considered the data of 333 pages, resulting in the observations consisting of the details of 10172 cars. Our main target of analysis is based on the ‘Price’ of the car, which involves various other features that are independent and dependent on the price of car like mileage, year, manufacturer etc. Once we scrape more features would also try and base our analysis on transmission, gas etc.
+## INTRODUCTION
 
+### Motivation
 
-## FEATURE SELECTION:
+The manufacturer sets the price of new cars in the industry, with the government incurring some additional costs in the form of taxes. Due to rising new car prices, used car sales are on the rise worldwide. However, because of the affordability of used cars, people tend more purchasing the used cars.
 
-Checking the correlation of other variables with the price variable and finding the predictor variables with high correlation and also find the independent variables to the price of car.
+When purchasing and selling, it's critical to understand the true market value of a car. A used car price prediction system is needed to accurately estimate the cars’ worthiness based on the features. While there are websites that provide this service, their forecast approach may or may not be more accurate. So, several methods and algorithms may be required in the prediction of a used car's true market worth.
 
+As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some point in their lives. 
 
-## METHODOLOGY:
-
-* Firstly, we would like to proceed with data extraction using web scrapping of website with used car data (eg: https://www.truecar.com ) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them based on our requirement. 
-
-* Next, we like to develop a regression model to predict the price of used car based on various models like linear regression model, support vector machine and random forest model and understand and base our analysis by comparing the best possible model for our forecasting.
-
-* Next, we would proceed with the development of web design to have a user better understand the price of their car based on our predictions and data we possess.
-
-## MODEL SELECTION: 
-
-* Prediction will be done considering the best performed model.
-* Building a web application for the prediction of price of a used car based on the features and specifications of the car.
+It's a great mistake to pay too much or sell for less than the market worth in this process so it is important to understand the price.
 
 
 
-## OUTCOMES
 
-* Primary goal of the project is to design a predictive model that can be used in real world scenarios to determine the price of used car in market.
-* Finding a best fit model for price prediction of used cars.
-* Developing a Web application that can suggest the user the price they should be paying or selling their used car.
+### Problem Statement
+
+
+1.The goal of this project is to estimate the price of used cars in the USA, using various machine learning techniques. 
+
+
+
+2.	For the benefit of buyers and sellers, a predictive analysis on used car prices and an estimation of what would be a good price to buy or sell a car on the open market.
+
+
+
+3.Try to make an estimate as to what features of a car matters most, in determining a used car's pricing.
+ 
+
+### Approach
+
+Data extraction using web scraping of website with used car data (eg: https://www.truecar.com ) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them if required.
+
+Developing a regression model to predict the price of used car based on various models like linear regression model, random forest and Gradient boosting model and cross validating the results to find the best fit model for price prediction in the case of both test and train data.
+
+Designing a web page to demonstrate the working of best fit model and provide an easy and interactive way to the user to predict the car price based on a few questions.
+
+
+
+
+## DATA COLLECTION
+
+Web Scraping of TRUECAR website for used car listings across United States.
+
+Extracting the dataset with listings of 10173 cars after considering the car listings of 333 pages.
+
+Dataset having 18 columns like :
+VIN, Brand, Model, Trim, Manufacture Year, Mileage, MPG_City, MPG_Highway, Drive Type, Fuel Type, Transmission, Exterior Color, Interior Color, Accidents, Number of Owners, Car Usage Type, Location, Price.
+
+
+## DATA CLEANING
+
+After loading the dataset, the shape of the dataset is (10173, 18).
+We have to check for duplicates, null values and the data types.
+As VIN is unique for every car, we filter the listings by VIN to eliminate the duplicate values.
+
+We see null values in MPG, transmission, drive type, fuel type and price, we impute them.
+
+All the data types are good except mileage and price, so we find the wrong data and correct them.
+
+
+#### Duplicates:
+
+There are 9899 unique VIN, which determines the data contains 274 repeated car listings. After deleting the duplicates, the shape of the dataset is (9899, 18).
+
+#### Null Values:
+
+As we see there is one null value in ‘Price’, we delete that listing as our main target variable is price.
+
+For filling missing values in ‘drive_type’, we try to get drive_type from ‘trim’ column and impute to the corresponding data.
+
+After sorting the data based on brand and model, picking up the missing values columns and imputing them with a forward fill and backfill of existing values in the corresponding columns.
+
+#### Data Types:
+
+After imputing the null values, the data types of mileage and price automatically corrected.
+
+
+### Addition of features:
+
+Added a new feature ‘Car_Age’, which is obtained by subtracting manufacture year from current year. And also checking if there are any car listings with manufacture year greater than 2022. Fortunately, there are no listings in that category.
+
+Removed the ‘Location’ column from the dataset, and added ‘State’ column by splitting the location and extracting the state from that.
+
+Adding a new feature ‘MPG’, which is obtained by the average of MPG_City and MPG_Highway values.
+
+
+## EXPLORATORY DATA ANALYSIS
+
+After clear analysis of the data, it is observed that we have:
+Vehicles from 49 different states across United States with 41 different branded cars.
+
+Vehicle models with manufacture years from 1997 - 2022 and Mileage ranging from 5 miles to 266229 miles.
+
+Cars with a minimum price of 2995 and maximum upto 272990 dollars.
+11 columns with numerical values, 6 columns with integer values and 1 column with float values.
+
+Listings as per State:
+
+From this we can clearly see that texas stands in the first position in the number of listings with 2162 (21.8%) and next is florida with around 1532 (15.5%) car listings and california has 1187(12%) he least number of cars being posted online from  the state of Maine which is just 3 listings 
+
+Listings as per Brand:
+
+Ford is the dominant brand on the used car market. And Chevrolet, Toyota, Jeep, Nissan are another top 4 makers. Totally they account for about 46% of the used car listings.
+
+Almost 96% of the car listings are with fuel type as Gas and only few cars are Hybrid, Diesel and Electric
+
+
+Most of the cars have automatic transmission
+
+
+A hypothesis here that used car website publishes cars with accident history is wrong, as most of the cars are with no accidents
+
+
+
+## PREDICTIVE MODELLING
+
+### Linear Regression Model
+
+This model we have processed the data using ohe and standard scaler, we got a train accuracy of 92.16 and test accuracy of 91.24 which is very good scores and most of the data looks to be linear.
+
+Also the RMSE for this model are 4681.508 (train data), 4814.534 (test data)
+
+
+## RANDOM FOREST MODEL
+
+Using Random Forest Model we got very good train score but the testing score is very less, this might be because the model is trying to overfit the data which sometimes is common in RF models. 
+
+Steps Taken to reduce this overfitting:
+
+1. Hypertune this model
+
+2. We also learned that RF model does not go well with ohe so we tried label encoding the columns and trained the model with hyertune parameters but the results were not much different than earlier ones.
+
+
+## Gradient Boost Model	
+
+We used gradient boost model as It relies on the intuition that the best possible next model, when combined with previous models, minimizes the overall prediction error. 
+
+This model solved the problem of overfitting as the test and train scores difference is significantly less than the previous models.(Hypertuned model)
+
+## XG BOOST MODEL
+
+This model performs good both for training and test data the root mean squared error is less than all the other models we have trained.
+Problem in this model is even though it is hypertuned this model is also slightly overfitting which we can see from the RMSE values of test and train data
+
+
+Considering all the RMSE values all the models for test and train data we choose to use the gradient boost model
+
+
+
+## APPLICATION DESIGN
+
+The web application was designed with the help of Streamlit and also Flask
+
+
+
 
 ## TEAM RESPONSIBILITIES
 
@@ -74,7 +187,7 @@ Checking the correlation of other variables with the price variable and finding 
 * Data collection and extracting the dataset 
 * Initial Cleaning of the data
 * Exploratory Data Analysis
-* Performing Regression analysis
+* Developing a web design for user friendly prediction
 
 ### Jaswanth Sai Nathani:
 * Performing Data Modeling
