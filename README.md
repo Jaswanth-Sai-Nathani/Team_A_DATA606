@@ -196,3 +196,6 @@ Problem in this model is even though it is hypertuned this model is also slightl
 * Model comparision and Cross validating the results
 * Finding a best fit model for prediction
 * Developing a web design for user friendly prediction
+
+
+## PROJECT PPT LINK : https://github.com/iamsaida/Team_A_DATA606/blob/main/PPT/USED%20CAR%20PRICE%20PREDICTION.pptx
