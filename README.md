@@ -40,15 +40,11 @@
 ### Problem Statement
 
 
-1.The goal of this project is to estimate the price of used cars in the USA, using various machine learning techniques. 
+* The goal of this project is to estimate the price of used cars in the USA, using various machine learning techniques. 
 
+* For the benefit of buyers and sellers, a predictive analysis on used car prices and an estimation of what would be a good price to buy or sell a car on the open market.
 
-
-2.	For the benefit of buyers and sellers, a predictive analysis on used car prices and an estimation of what would be a good price to buy or sell a car on the open market.
-
-
-
-3.Try to make an estimate as to what features of a car matters most, in determining a used car's pricing.
+* Try to make an estimate as to what features of a car matters most, in determining a used car's pricing.
  
 
 ### Approach
@@ -102,7 +98,7 @@
 * After imputing the null values, the data types of mileage and price automatically corrected.
 
 
-### Addition of features:
+#### Addition of features:
 
 * Added a new feature ‘Car_Age’, which is obtained by subtracting manufacture year from current year. And also checking if there are any car listings with manufacture year greater than 2022. Fortunately, there are no listings in that category.
 
@@ -114,28 +110,29 @@
 ## EXPLORATORY DATA ANALYSIS
 
 After clear analysis of the data, it is observed that we have:
-Vehicles from 49 different states across United States with 41 different branded cars.
+* Vehicles from 49 different states across United States with 41 different branded cars.
 
-Vehicle models with manufacture years from 1997 - 2022 and Mileage ranging from 5 miles to 266229 miles.
+* Vehicle models with manufacture years from 1997 - 2022 and Mileage ranging from 5 miles to 266229 miles.
 
-Cars with a minimum price of 2995 and maximum upto 272990 dollars.
-11 columns with numerical values, 6 columns with integer values and 1 column with float values.
+* Cars with a minimum price of 2995 and maximum upto 272990 dollars.
 
-Listings as per State:
+* 11 columns with numerical values, 6 columns with integer values and 1 column with float values.
 
-From this we can clearly see that texas stands in the first position in the number of listings with 2162 (21.8%) and next is florida with around 1532 (15.5%) car listings and california has 1187(12%) he least number of cars being posted online from  the state of Maine which is just 3 listings 
+#### Listings as per State:
 
-Listings as per Brand:
+* From this we can clearly see that texas stands in the first position in the number of listings with 2162 (21.8%) and next is florida with around 1532 (15.5%) car listings and california has 1187(12%) he least number of cars being posted online from  the state of Maine which is just 3 listings 
 
-Ford is the dominant brand on the used car market. And Chevrolet, Toyota, Jeep, Nissan are another top 4 makers. Totally they account for about 46% of the used car listings.
+#### Listings as per Brand:
 
-Almost 96% of the car listings are with fuel type as Gas and only few cars are Hybrid, Diesel and Electric
+* Ford is the dominant brand on the used car market. And Chevrolet, Toyota, Jeep, Nissan are another top 4 makers. Totally they account for about 46% of the used car listings.
 
-
-Most of the cars have automatic transmission
+* Almost 96% of the car listings are with fuel type as Gas and only few cars are Hybrid, Diesel and Electric
 
 
-A hypothesis here that used car website publishes cars with accident history is wrong, as most of the cars are with no accidents
+* Most of the cars have automatic transmission
+
+
+* A hypothesis here that used car website publishes cars with accident history is wrong, as most of the cars are with no accidents
 
 
 
@@ -143,16 +140,16 @@ A hypothesis here that used car website publishes cars with accident history is 
 
 ### Linear Regression Model
 
-This model we have processed the data using ohe and standard scaler, we got a train accuracy of 92.16 and test accuracy of 91.24 which is very good scores and most of the data looks to be linear.
+* This model we have processed the data using ohe and standard scaler, we got a train accuracy of 92.16 and test accuracy of 91.24 which is very good scores and most of the data looks to be linear.
 
-Also the RMSE for this model are 4681.508 (train data), 4814.534 (test data)
+* Also the RMSE for this model are 4681.508 (train data), 4814.534 (test data)
 
 
 ## RANDOM FOREST MODEL
 
-Using Random Forest Model we got very good train score but the testing score is very less, this might be because the model is trying to overfit the data which sometimes is common in RF models. 
+* Using Random Forest Model we got very good train score but the testing score is very less, this might be because the model is trying to overfit the data which sometimes is common in RF models. 
 
-Steps Taken to reduce this overfitting:
+* Steps Taken to reduce this overfitting:
 
 1. Hypertune this model
 
@@ -161,23 +158,23 @@ Steps Taken to reduce this overfitting:
 
 ## Gradient Boost Model	
 
-We used gradient boost model as It relies on the intuition that the best possible next model, when combined with previous models, minimizes the overall prediction error. 
+* We used gradient boost model as It relies on the intuition that the best possible next model, when combined with previous models, minimizes the overall prediction error. 
 
-This model solved the problem of overfitting as the test and train scores difference is significantly less than the previous models.(Hypertuned model)
+* This model solved the problem of overfitting as the test and train scores difference is significantly less than the previous models.(Hypertuned model)
 
 ## XG BOOST MODEL
 
-This model performs good both for training and test data the root mean squared error is less than all the other models we have trained.
+* This model performs good both for training and test data the root mean squared error is less than all the other models we have trained.
 Problem in this model is even though it is hypertuned this model is also slightly overfitting which we can see from the RMSE values of test and train data
 
 
-Considering all the RMSE values all the models for test and train data we choose to use the gradient boost model
+* Considering all the RMSE values all the models for test and train data we choose to use the gradient boost model
 
 
 
 ## APPLICATION DESIGN
 
-The web application was designed with the help of Streamlit and also Flask
+* The web application was designed with the help of Streamlit and also Flask
 
 
 
