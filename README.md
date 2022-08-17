@@ -26,13 +26,13 @@
 
 ### Motivation
 
-The manufacturer sets the price of new cars in the industry, with the government incurring some additional costs in the form of taxes. Due to rising new car prices, used car sales are on the rise worldwide. However, because of the affordability of used cars, people tend more purchasing the used cars.
+* The manufacturer sets the price of new cars in the industry, with the government incurring some additional costs in the form of taxes. Due to rising new car prices, used car sales are on the rise worldwide. However, because of the affordability of used cars, people tend more purchasing the used cars.
 
-When purchasing and selling, it's critical to understand the true market value of a car. A used car price prediction system is needed to accurately estimate the cars’ worthiness based on the features. While there are websites that provide this service, their forecast approach may or may not be more accurate. So, several methods and algorithms may be required in the prediction of a used car's true market worth.
+* When purchasing and selling, it's critical to understand the true market value of a car. A used car price prediction system is needed to accurately estimate the cars’ worthiness based on the features. While there are websites that provide this service, their forecast approach may or may not be more accurate. So, several methods and algorithms may be required in the prediction of a used car's true market worth.
 
-As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some point in their lives. 
+* As a result, the model established in this study could aid online web services that determine the market worth of a used car. Many people are interested in the used automobile market because they wish to sell their car or buy a used car at some point in their lives. 
 
-It's a great mistake to pay too much or sell for less than the market worth in this process so it is important to understand the price.
+* It's a great mistake to pay too much or sell for less than the market worth in this process so it is important to understand the price.
 
 
 
@@ -53,60 +53,62 @@ It's a great mistake to pay too much or sell for less than the market worth in t
 
 ### Approach
 
-Data extraction using web scraping of website with used car data (eg: https://www.truecar.com ) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them if required.
+* Data extraction using web scraping of website with used car data (eg: https://www.truecar.com ) and then proceed with data cleaning and feature selection. Also, once data cleaning is done would like to understand how various features are distributed and try normalizing them if required.
 
-Developing a regression model to predict the price of used car based on various models like linear regression model, random forest and Gradient boosting model and cross validating the results to find the best fit model for price prediction in the case of both test and train data.
+* Developing a regression model to predict the price of used car based on various models like linear regression model, random forest and Gradient boosting model and cross validating the results to find the best fit model for price prediction in the case of both test and train data.
 
-Designing a web page to demonstrate the working of best fit model and provide an easy and interactive way to the user to predict the car price based on a few questions.
+* Designing a web page to demonstrate the working of best fit model and provide an easy and interactive way to the user to predict the car price based on a few questions.
 
 
 
 
 ## DATA COLLECTION
 
-Web Scraping of TRUECAR website for used car listings across United States.
+* Web Scraping of TRUECAR website for used car listings across United States.
 
-Extracting the dataset with listings of 10173 cars after considering the car listings of 333 pages.
+* Extracting the dataset with listings of 10173 cars after considering the car listings of 333 pages.
 
-Dataset having 18 columns like :
-VIN, Brand, Model, Trim, Manufacture Year, Mileage, MPG_City, MPG_Highway, Drive Type, Fuel Type, Transmission, Exterior Color, Interior Color, Accidents, Number of Owners, Car Usage Type, Location, Price.
+* Dataset having 18 columns like :
+          VIN, Brand, Model, Trim, Manufacture Year, Mileage, MPG_City, MPG_Highway, Drive Type, Fuel Type, Transmission, Exterior Color, Interior Color,           Accidents, Number of Owners, Car Usage Type, Location, Price.
 
 
 ## DATA CLEANING
 
-After loading the dataset, the shape of the dataset is (10173, 18).
-We have to check for duplicates, null values and the data types.
-As VIN is unique for every car, we filter the listings by VIN to eliminate the duplicate values.
+* After loading the dataset, the shape of the dataset is (10173, 18).
 
-We see null values in MPG, transmission, drive type, fuel type and price, we impute them.
+* We have to check for duplicates, null values and the data types.
 
-All the data types are good except mileage and price, so we find the wrong data and correct them.
+* As VIN is unique for every car, we filter the listings by VIN to eliminate the duplicate values.
+
+* As there are null values in MPG, transmission, drive type, fuel type and price, we impute them.
+
+* All the data types are good except mileage and price, so we find the wrong data and correct them.
 
 
 #### Duplicates:
 
-There are 9899 unique VIN, which determines the data contains 274 repeated car listings. After deleting the duplicates, the shape of the dataset is (9899, 18).
+* There are 9899 unique VIN, which determines the data contains 274 repeated car listings. After deleting the duplicates, the shape of the dataset is (9899, 18).
 
 #### Null Values:
 
-As we see there is one null value in ‘Price’, we delete that listing as our main target variable is price.
+* As we see there is one null value in ‘Price’, we delete that listing as our main target variable is price.
 
-For filling missing values in ‘drive_type’, we try to get drive_type from ‘trim’ column and impute to the corresponding data.
+* For filling missing values in ‘drive_type’, we try to get drive_type from ‘trim’ column and impute to the corresponding data.
 
-After sorting the data based on brand and model, picking up the missing values columns and imputing them with a forward fill and backfill of existing values in the corresponding columns.
+* After sorting the data based on brand and model, picking up the missing values columns and imputing them with a forward fill and backfill of existing values in the corresponding columns.
 
 #### Data Types:
 
-After imputing the null values, the data types of mileage and price automatically corrected.
+* After imputing the null values, the data types of mileage and price automatically corrected.
 
 
 ### Addition of features:
 
-Added a new feature ‘Car_Age’, which is obtained by subtracting manufacture year from current year. And also checking if there are any car listings with manufacture year greater than 2022. Fortunately, there are no listings in that category.
+* Added a new feature ‘Car_Age’, which is obtained by subtracting manufacture year from current year. And also checking if there are any car listings with manufacture year greater than 2022. Fortunately, there are no listings in that category.
 
-Removed the ‘Location’ column from the dataset, and added ‘State’ column by splitting the location and extracting the state from that.
+* Removed the ‘Location’ column from the dataset, and added ‘State’ column by splitting the location and extracting the state from that.
 
-Adding a new feature ‘MPG’, which is obtained by the average of MPG_City and MPG_Highway values.
+* Adding a new feature ‘MPG’, which is obtained by the average of MPG_City and MPG_Highway values.
 
 
 ## EXPLORATORY DATA ANALYSIS
