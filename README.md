@@ -138,7 +138,7 @@ After clear analysis of the data, it is observed that we have:
 
 ## PREDICTIVE MODELLING
 
-### Linear Regression Model
+### LINEAR REGRESSION MODEL
 
 * This model we have processed the data using ohe and standard scaler, we got a train accuracy of 92.16 and test accuracy of 91.24 which is very good scores and most of the data looks to be linear.
 
@@ -156,7 +156,7 @@ After clear analysis of the data, it is observed that we have:
 2. We also learned that RF model does not go well with ohe so we tried label encoding the columns and trained the model with hyertune parameters but the results were not much different than earlier ones.
 
 
-### Gradient Boost Model	
+### GRADIENT BOOST MODEL	
 
 * We used gradient boost model as It relies on the intuition that the best possible next model, when combined with previous models, minimizes the overall prediction error. 
 
