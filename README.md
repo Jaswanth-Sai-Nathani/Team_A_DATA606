@@ -145,7 +145,7 @@ After clear analysis of the data, it is observed that we have:
 * Also the RMSE for this model are 4681.508 (train data), 4814.534 (test data)
 
 
-## RANDOM FOREST MODEL
+### RANDOM FOREST MODEL
 
 * Using Random Forest Model we got very good train score but the testing score is very less, this might be because the model is trying to overfit the data which sometimes is common in RF models. 
 
@@ -156,13 +156,13 @@ After clear analysis of the data, it is observed that we have:
 2. We also learned that RF model does not go well with ohe so we tried label encoding the columns and trained the model with hyertune parameters but the results were not much different than earlier ones.
 
 
-## Gradient Boost Model	
+### Gradient Boost Model	
 
 * We used gradient boost model as It relies on the intuition that the best possible next model, when combined with previous models, minimizes the overall prediction error. 
 
 * This model solved the problem of overfitting as the test and train scores difference is significantly less than the previous models.(Hypertuned model)
 
-## XG BOOST MODEL
+### XG BOOST MODEL
 
 * This model performs good both for training and test data the root mean squared error is less than all the other models we have trained.
 Problem in this model is even though it is hypertuned this model is also slightly overfitting which we can see from the RMSE values of test and train data
