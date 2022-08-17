@@ -170,13 +170,13 @@ Problem in this model is even though it is hypertuned this model is also slightl
 
 ## CONCLUSION
 
-* Considering all the RMSE values all the models for test and train data we choose to use the gradient boost model
+* Considering all the RMSE values all the models for test and train data we choose to use the gradient boost model for predicting the price of the car. This takes the inputs of car brand, model, mileage, car age, drive type, fuel type, number of accidents and owners, to predict the price of the car
 
 
 
 ## APPLICATION DESIGN
 
-* The web application was designed with the help of Streamlit and also Flask
+* The web application was designed with the help of Streamlit and also Flask displayig the input of the user for car brand, model, mileage, car age, drive type, fuel type, number of accidents and owners. After all the details are entered the web site displays the predicted price of the car.
 
 
 
