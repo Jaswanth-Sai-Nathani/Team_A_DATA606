@@ -199,3 +199,5 @@ Problem in this model is even though it is hypertuned this model is also slightl
 
 
 ## PROJECT PPT LINK : https://github.com/iamsaida/Team_A_DATA606/blob/main/PPT/USED%20CAR%20PRICE%20PREDICTION.pptx
+
+## PRESENTATION RECORDING YOUTUBE LINK : https://youtu.be/64MmvXDLugs
